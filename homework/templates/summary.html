@@ -3,6 +3,13 @@
 {% block content %}
     <h2>Summary</h2>
 
-    <!-- TODO: Display summary statistics -->
+    {% if total_students == 0 %}
+    <p>No students enrolled yet.</p>
+    {% else %}
+    <p>Total students: {{ total_students }}</p>
+    <p>Average grade: {{ total_grades }}</p>
+    <p>Highest grade: {{ max_grade }}</p>
+    <p>Lowest grade: {{ min_grade }}</p>
+    {% endif %}
 
 {% endblock %}
